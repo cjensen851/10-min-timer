@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>10 Minute Timer</title>
-  <!-- Load Roboto from Google Fonts -->
+  <!-- Load Roboto font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style>
     html, body {
@@ -18,7 +17,7 @@
     }
     .wrapper {
       padding-top: 20px;
-      transform: scale(0.5); /* shrink to 50% size */
+      transform: scale(0.5); /* smaller size */
       transform-origin: top center;
     }
     h1 {
@@ -31,7 +30,7 @@
       margin-top: 30px;
       border: none;
       border-radius: 10px;
-      background: #000; /* black button */
+      background: #000;
       color: white;
       cursor: pointer;
       font-family: 'Roboto', sans-serif;
@@ -53,11 +52,11 @@
     const startBtn = document.getElementById("startBtn");
     let countdown;
 
-    startBtn.addEventListener("click", () => {
+    startBtn.addEventListener("click", function () {
       let timeLeft = 600;
       startBtn.disabled = true;
 
-      countdown = setInterval(() => {
+      countdown = setInterval(function () {
         const m = String(Math.floor(timeLeft / 60)).padStart(2, '0');
         const s = String(timeLeft % 60).padStart(2, '0');
         timerDisplay.textContent = `${m}:${s}`;
